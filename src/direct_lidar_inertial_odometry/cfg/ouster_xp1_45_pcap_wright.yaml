@@ -1,0 +1,42 @@
+###########################################################
+#                                                         #
+# Copyright (c)                                           #
+#                                                         #
+# The Verifiable & Control-Theoretic Robotics (VECTR) Lab #
+# University of California, Los Angeles                   #
+#                                                         #
+# Authors: Kenny J. Chen, Ryan Nemiroff, Brett T. Lopez   #
+# Contact: {kennyjchen, ryguyn, btlopez}@ucla.edu         #
+#                                                         #
+###########################################################
+
+/**:
+  ros__parameters:
+
+    version: 1.1.1
+
+    adaptive: true
+
+
+    # === dense trajectory export ===
+    odom/dense_traj/enable: true
+    odom/dense_traj/topic: "dense_path"
+    
+    pointcloud/deskew: true
+    pointcloud/voxelize: true
+
+    imu/calibration: false
+    imu/intrinsics/accel/bias: [ 0.0, 0.0, 0.0 ]
+    imu/intrinsics/accel/sm:   [ 1.,  0.,  0.,
+                                 0.,  1.,  0.,
+                                 0.,  0.,  1. ]
+    imu/intrinsics/gyro/bias: [ 0.0, 0.0, 0.0 ]
+    # [ x: 6.0000027, y: -28.0000027, z: 90.0000038 ]
+    extrinsics/baselink2imu/T: [ 0.0, 0.0, 0.0 ]
+    extrinsics/baselink2imu/R: [  0.0000000, -0.8829476, -0.4694716,
+				   0.9945219,  0.0490731, -0.0922932,
+				   0.1045285, -0.4668998,  0.8781107 ]
+    extrinsics/baselink2lidar/t: [ 0.0, 0.0, 0.0 ]
+    extrinsics/baselink2lidar/R: [  0.0000000, -0.8829476, -0.4694716,
+				   0.9945219,  0.0490731, -0.0922932,
+				   0.1045285, -0.4668998,  0.8781107 ]
